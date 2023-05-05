@@ -1,0 +1,194 @@
+/* ------------------------------------------ Reset ------------------------------------------ */
+@font-face {
+    font-family: 'Gotham Pro';
+    font-display: swap;
+    src: local("O"), url("../fonts/Gotham-Pro/gothampro.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham Pro';
+    font-display: swap;
+    src: local("O"), url("../fonts/Gotham-Pro/gothampro_bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+html,
+body {
+    height: 100%;
+    line-height: 1;
+    font-size: 14px;
+    color: #404040;
+    background: #F4F7FA;
+    font-weight: 400;
+    font-family: "Gotham Pro", sans-serif;
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+[class*="__container"] {
+    max-width: 1092px;
+    margin: 0 auto;
+    padding: 0px 15px;
+}
+
+[class*="__container-fluid"] {
+    max-width: none;
+    margin: 0 auto;
+    padding: 0px 80px;
+
+    @media (max-width: 991.98px) {
+        padding: 0px 15px;
+    }
+}
+
+._ibg {
+    position: relative;
+}
+
+._ibg img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.page {
+    flex: 1 1 auto;
+}
+
+#check {
+    display: none;
+
+    &:checked+div {
+        left: 0;
+    }
+}
+
+#burger {
+    display: none;
+
+    @media (max-width: 767.98px) {
+        background: #F4F7FA;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 7px;
+        transition: all 0.3s ease 0s;
+
+        &:active {
+            background: #afcbed;
+        }
+
+        i {
+            color: #4614E8;
+            font-size: 22px;
+        }
+    }
+}
+
+.button {
+    display: inline-block;
+    background: #273895;
+    color: #fff;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 112%;
+    padding: 16px 32px;
+    transition: all 0.3s ease 0s;
+
+    &:hover {
+        background: #5064d6;
+    }
+
+    @media (max-width: 479.98px) {
+        font-size: 12px;
+    }
+}
+
+.header-block {
+    &__subtitle {
+        line-height: 150%;
+    }
+
+    &__title {
+        font-size: 32px;
+        font-weight: 700;
+        color: #303030;
+        line-height: 137%;
+
+        &:not(:last-child) {
+            margin: 0px 0px 16px 0px;
+        }
+
+        &_large {
+            font-size: 48px;
+            @media (max-width: 767.98px) {
+                font-size: 32px;
+            }
+
+            @media (max-width: 479.98px) {
+                font-size: 24px;
+            }
+        }
+    }
+
+    &__text {
+        line-height: 150%;
+
+        @media (max-width: 479.98px) {
+            font-size: 12px;
+        }
+    }
+
+    &_white {
+        color: #fff;
+    }
+}
